@@ -1,0 +1,441 @@
+/**** Assign Book to Staff ****/
+.aBTSWrapper {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+.aBTSWrapper .aBTSHeading {
+  width: 100%;
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 560px) {
+  .aBTSWrapper .aBTSHeading {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.aBTSWrapper .aBTSHeading li {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.aBTSWrapper .aBTSHeading li span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #3AB870;
+}
+.aBTSWrapper .aBTSHeading li span img {
+  display: block;
+  width: 24px;
+}
+.aBTSWrapper .aBTSHeading li h1 {
+  text-align: left;
+  font: 400 24px "sf_ui_textsemibold", sans-serif;
+  color: #202020;
+  margin: 0 0 0 16px;
+  padding: 0;
+}
+.aBTSWrapper .paging {
+  width: 100%;
+  margin: 24px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  background-color: #fff;
+}
+.aBTSWrapper .paging a {
+  display: inline-block;
+  font: 400 12px/16px "sf_ui_textmedium", sans-serif;
+  color: #505050;
+}
+.aBTSWrapper .paging a.active {
+  color: #000;
+}
+.aBTSWrapper .paging a:hover {
+  color: #000;
+}
+.aBTSWrapper .paging span {
+  display: inline-block;
+  margin: 0 12px;
+  height: 16px;
+  width: 16px;
+  background: url(../icons/right-arr.svg) no-repeat center;
+  background-size: 16px;
+}
+.aBTSWrapper .aBTSWrapp {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 24px;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW {
+  width: 100%;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  .aBTSWrapper .aBTSWrapp .bookteacherW {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW h2 {
+  text-align: left;
+  font: 400 18px "sf_ui_textbold", sans-serif;
+  color: #000;
+  margin: 0;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul {
+  width: 100%;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: flex-start;
+}
+@media (max-width: 560px) {
+  .aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 8px;
+  text-align: left;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li label {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: 400 13px "sf_ui_textmedium", sans-serif;
+  color: #505050;
+  margin: 0;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li input[type=text] {
+  height: 40px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  padding: 6px 12px;
+  box-sizing: border-box;
+  font: 400 14px "sf_ui_textsemibold", sans-serif;
+  color: #000;
+  background-color: #fff;
+  text-align: left;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li input[type=text]:focus {
+  outline: none;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li input[type=text].date {
+  background: url(../icons/calendar.svg) no-repeat right 8px center #fff;
+  background-size: 18px;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li textarea {
+  height: 96px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  padding: 6px 12px;
+  box-sizing: border-box;
+  font: 400 14px "sf_ui_textsemibold", sans-serif;
+  color: #000;
+  background-color: #fff;
+  text-align: left;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li textarea:focus {
+  outline: none;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 40px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  padding: 6px 12px;
+  box-sizing: border-box;
+  font: 400 14px "sf_ui_textsemibold", sans-serif;
+  color: #000;
+  background-color: #fff;
+  text-align: left;
+  background: url(../icons/arrow_drop_down.svg) no-repeat right 8px center;
+  background-size: 24px;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li select:focus {
+  outline: none;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li input[type=submit] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  height: 40px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  padding: 6px;
+  box-sizing: border-box;
+  font: 400 14px "sf_ui_textmedium", sans-serif;
+  color: #fff;
+  background-color: #0073D8;
+  cursor: pointer;
+  border: none;
+  margin: 22px 0 0 0;
+}
+@media (max-width: 1024px) {
+  .aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li input[type=submit] {
+    margin: 21px 0 0 0;
+  }
+}
+@media (max-width: 560px) {
+  .aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li input[type=submit] {
+    margin: 0;
+  }
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li input[type=submit]:hover {
+  background-color: #0059a7;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li input[type=submit].download {
+  background: url(../icons/downloadEx.svg) no-repeat left 16px center #9800D8;
+  background-size: 20px;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li input[type=submit].download:hover {
+  background-color: #840BB7;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li input[type=submit].pdf {
+  background: url(../icons/d_pd.svg) no-repeat left 8px center #A100C9;
+  background-size: 20px;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW ul li input[type=submit].pdf:hover {
+  background-color: #8100A1;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW .saveTechnology {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0 0 0;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW .saveTechnology input[type=submit] {
+  width: 180px;
+  height: 48px;
+  text-align: center;
+  border-radius: 6px;
+  font: 400 14px "sf_ui_textmedium", sans-serif;
+  color: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: #13BC52;
+}
+@media (max-width: 560px) {
+  .aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW .saveTechnology input[type=submit] {
+    width: 100%;
+  }
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .searchBookW .saveTechnology input[type=submit]:hover {
+  background-color: #00923f;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .teacherInfoW {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: url(../icons/tbg.png) no-repeat right bottom #fff;
+  background-size: contain;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .teacherInfoW dl {
+  width: 100%;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: 96px auto;
+  align-items: center;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .teacherInfoW dl dt {
+  width: 100%;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .teacherInfoW dl dt .tphoto {
+  width: 100%;
+  height: 96px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .teacherInfoW dl dt .tphoto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .teacherInfoW dl dt h2 {
+  text-align: left;
+  font: 400 18px "sf_ui_textsemibold", sans-serif;
+  color: #101011;
+  padding: 0 0 8px 0;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .teacherInfoW dl dt p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  align-items: flex-start;
+  padding: 4px 0 0 0;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .teacherInfoW dl dt p small {
+  display: block;
+  width: 100px;
+  text-align: left;
+  font: 400 14px "sf_ui_textregular", sans-serif;
+  color: #505055;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .teacherInfoW dl dt p span {
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  font: 400 14px "sf_ui_textsemibold", sans-serif;
+  color: #202022;
+  position: relative;
+  padding: 0 0 0 12px;
+  box-sizing: border-box;
+}
+.aBTSWrapper .aBTSWrapp .bookteacherW .teacherInfoW dl dt p span:before {
+  content: ":";
+  position: absolute;
+  left: 0;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  gap: 16px;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW h2 {
+  text-align: left;
+  font: 400 18px "sf_ui_textbold", sans-serif;
+  color: #202022;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .tableTeaW {
+  width: 100%;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .tableTeaW .tableTW {
+  width: 100%;
+  overflow-x: auto;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .tableTeaW .tableTW table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .tableTeaW .tableTW table th {
+  text-align: center;
+  padding: 8px;
+  background-color: #ECEDFD;
+  border: 1px solid #445BAC;
+  font: 400 12px "sf_ui_textsemibold", sans-serif;
+  color: #202022;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .tableTeaW .tableTW table td {
+  text-align: center;
+  font: 400 12px "sf_ui_textmedium", sans-serif;
+  color: #505055;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #445BAC;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .tableTeaW .tableTW table td textarea {
+  height: 56px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #c0c0c0;
+  padding: 5px 8px;
+  box-sizing: border-box;
+  font: 400 13px "sf_ui_textmedium", sans-serif;
+  color: #202022;
+  background-color: #fff;
+  text-align: left;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .tableTeaW .tableTW table td textarea:focus {
+  outline: none;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .tableTeaW .addNewTBook {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px 0 0 0;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .tableTeaW .addNewTBook a {
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  border-radius: 8px;
+  padding: 0 24px 0 48px;
+  background: url(../icons/addNBook.svg) no-repeat left 12px center #0073D8;
+  background-size: 24px;
+  font: 400 13px/40px "sf_ui_textmedium", sans-serif;
+  color: #fff;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .tableTeaW .addNewTBook a:hover {
+  background-color: #0059a7;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .savebookT {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px 0 0 0;
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .savebookT input[type=submit] {
+  width: 180px;
+  height: 48px;
+  text-align: center;
+  border-radius: 6px;
+  font: 400 14px "sf_ui_textmedium", sans-serif;
+  color: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: #13BC52;
+}
+@media (max-width: 560px) {
+  .aBTSWrapper .aBTSWrapp .teacherBookTableW .savebookT input[type=submit] {
+    width: 100%;
+  }
+}
+.aBTSWrapper .aBTSWrapp .teacherBookTableW .savebookT input[type=submit]:hover {
+  background-color: #00923f;
+}
