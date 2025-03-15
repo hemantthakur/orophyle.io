@@ -1384,8 +1384,9 @@ footer {
 .why-choose {
   width: 100%;
   padding: 82px 0;
-  background: url(../images/why-choose.png) no-repeat center;
-  background-size: cover; }
+  /*background: url(../images/why-choose.png) no-repeat center;*/
+  background-size: cover;
+  background-color: #00008B; }
   @media (max-width: 768px) {
     .why-choose {
       padding: 48px 0; } }
